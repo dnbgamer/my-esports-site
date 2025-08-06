@@ -1,0 +1,47 @@
+/* In style.css */
+@import url('https://fonts.googleapis.com/css2?family=...&display=swap'); /* Import Google Fonts used on the site */
+
+:root {
+    --primary-color: #9f36f4; /* The main purple */
+    --secondary-color: #00bfff; /* The bright blue */
+    --dark-bg: #121212;
+    --text-color: #ffffff;
+    /* Add other colors you identify */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Your Chosen Font', sans-serif; /* Use the font you imported */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px); /* Lifts the button slightly */
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Example for mobile phones */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the desktop nav */
+    }
+    .hamburger-menu {
+        display: block; /* Show the mobile menu icon */
+    }
+    /* Adjust font sizes, padding, etc. */
+}
